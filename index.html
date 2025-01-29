@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/model.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <!-- ===== Boxicons CSS ===== -->
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+        <title>My Wallet</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span style="display: inline-flex">
+                            <img src="media/logo.png" alt="Logo" width="45px" height="45px" style="margin: 7px;">
+                            <h1 style="color: white; margin-top: 5px; margin-left: 10px;">Kanzas</h1>
+                        </span>
+                    </a>
+                </div>
+                <div class="links">
+                    <div class="link active" onclick="window.location.href='index.html'">
+                        <i class='bx bxs-wallet'></i>
+                        <span>Wallet</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='orders.html'" >
+                        <i class='bx bx-clipboard' ></i>
+                        <span>Orders</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='favorites.html'">
+                        <i class='bx bxs-star' ></i>
+                        <span>Favorites</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='market.html'">
+                        <i class='bx bxs-store-alt' ></i>
+                        <span>Market</span>
+                    </div>
+                    <div class="link secondary" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link tertiary" id="mobileMoreOptions" onclick="toggleMobileNav()">
+                        <i class='bx bx-dots-vertical-rounded'></i>
+                        <span>More</span>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="links secondary">
+                    <div class="link" id="userProfileDiv" onclick="window.location.href='userAuth.html'">
+                        
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDiv" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigationMobile">
+            <div class="closeNavigationMobile" onclick="toggleMobileNav()">
+                <i class='bx bx-x' ></i>
+            </div>
+            <div class="mobileWrapper">
+                <div class="links">
+                    <div class="link" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link" id="userProfileDivMobile" onclick="window.location.href='userAuth.html'">
+                            
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDivMobile" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <h1>Aqui</h1>
+        </div>
+
+    <script src='js/navbar.js'></script>
+    </body>
+</html>

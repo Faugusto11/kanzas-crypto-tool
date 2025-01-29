@@ -1,0 +1,6 @@
+{
+    "require": {
+        "jaggedsoft/php-binance-api": "@dev",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

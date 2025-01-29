@@ -1,0 +1,77 @@
+.calculator {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.inputs {
+    display: flex;
+}
+.coin-1 {
+    margin-right: 7px;
+    display: flex;
+}
+.coin-2 {
+    margin-left: 7px;
+    display: flex;
+}
+select {
+    width: 120px;
+    height: 56px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-right: 0.5px solid #EAEAEA;
+    border-radius: 25px 0px 0px 25px;
+    text-align: center;
+}
+select:hover {
+    cursor: pointer;
+}
+input {
+    width: 70%;
+    height: 56px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-left: 0.5px solid #EAEAEA;
+    border-radius: 0px 25px 25px 0px;
+    padding-left: 15px;
+}
+input:hover {
+    background-color: #F2F2F2;
+}
+input:focus{
+    outline: none;
+}
+.button-convert {
+    margin-top: 100px;
+}
+.result{
+    background-color: rgb(48, 51, 61);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 760px) {
+    .inputs {
+        flex-direction: column;
+    }
+    .coin-1 {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .coin-2 {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .button-convert {
+        margin-top: 50px;
+    }
+}

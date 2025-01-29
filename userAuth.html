@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Hub</title>
+        <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+         <!-- ===== CSS ===== -->
+         <link rel="stylesheet" href="css/model.css">
+         <link rel="stylesheet" href="css/userAuth.css">
+         <link rel="stylesheet" href="css/navbar.css"> 
+        <!-- ===== Boxicons CSS ===== -->
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span style="display: inline-flex">
+                            <img src="media/logo.png" alt="Logo" width="45px" height="45px" style="margin: 7px;">
+                            <h1 style="color: white; margin-top: 5px; margin-left: 10px;">Kanzas</h1>
+                        </span>
+                    </a>
+                </div>
+                <div class="links">
+                    <div class="link" onclick="window.location.href='index.html'">
+                        <i class='bx bxs-wallet'></i>
+                        <span>Wallet</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='orders.html'" >
+                        <i class='bx bx-clipboard' ></i>
+                        <span>Orders</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='favorites.html'">
+                        <i class='bx bxs-star' ></i>
+                        <span>Favorites</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='market.html'">
+                        <i class='bx bxs-store-alt' ></i>
+                        <span>Market</span>
+                    </div>
+                    <div class="link secondary" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link tertiary active" id="mobileMoreOptions" onclick="toggleMobileNav()">
+                        <i class='bx bx-dots-vertical-rounded'></i>
+                        <span>More</span>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="links secondary">
+                    <div class="link active" id="userProfileDiv" onclick="window.location.href='userAuth.html'">
+                        
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDiv" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigationMobile">
+            <div class="closeNavigationMobile" onclick="toggleMobileNav()">
+                <i class='bx bx-x' ></i>
+            </div>
+            <div class="mobileWrapper">
+                <div class="links">
+                    <div class="link" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link active" id="userProfileDivMobile" onclick="window.location.href='userAuth.html'">
+                            
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDivMobile" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--   User Auth   -->
+        <div class="main">
+            <div class="container">
+                <div class="form" id="signInContainer">
+                    <h1>Sign in</h1>
+                    <form action="backend/get/signIn.php" method="POST">
+                        <div class="inputBox">
+                            <input type="text" placeholder="Email or username" name="username" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div>
+                    </form>
+                    <span>Don't have an account? <a href="javascript:;" id="signUpLink">Sign up</a></span>
+                </div>
+                <div class="form hidden" id="signUpContainer">
+                    <h1>Sign up</h1>
+                    <form action="backend/post/signUp.php" method="POST">
+                        <div class="inputBox">
+                            <input type="text" placeholder="First name" name="firstName" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div>
+                    </form>
+                    <span>Already have an account? <a href="javascript:;" id="signInLink">Sign in</a></span>
+                </div>
+            </div>
+        </div>
+        <script src="js/userAuth.js"></script>
+        <script src="js/navbar.js"></script>
+    </body>
+</html>

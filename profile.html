@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+        <!-- ===== CSS ===== -->
+         <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/model.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <!-- ===== Boxicons CSS ===== -->
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+        <title>My Profile</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span style="display: inline-flex">
+                            <img src="media/logo.png" alt="Logo" width="45px" height="45px" style="margin: 7px;">
+                            <h1 style="color: white; margin-top: 5px; margin-left: 10px;">Kanzas</h1>
+                        </span>
+                    </a>
+                </div>
+                <div class="links">
+                    <div class="link" onclick="window.location.href='index.html'">
+                        <i class='bx bxs-wallet'></i>
+                        <span>Wallet</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='orders.html'" >
+                        <i class='bx bx-clipboard' ></i>
+                        <span>Orders</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='favorites.html'">
+                        <i class='bx bxs-star' ></i>
+                        <span>Favorites</span>
+                    </div>
+                    <div class="link" onclick="window.location.href='market.html'">
+                        <i class='bx bxs-store-alt' ></i>
+                        <span>Market</span>
+                    </div>
+                    <div class="link secondary" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link tertiary active" id="mobileMoreOptions" onclick="toggleMobileNav()">
+                        <i class='bx bx-dots-vertical-rounded'></i>
+                        <span>More</span>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="links secondary">
+                    <div class="link active" id="userProfileDiv" onclick="window.location.href='userAuth.html'">
+                        
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDiv" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigationMobile">
+            <div class="closeNavigationMobile" onclick="toggleMobileNav()">
+                <i class='bx bx-x' ></i>
+            </div>
+            <div class="mobileWrapper">
+                <div class="links">
+                    <div class="link" onclick="window.location.href='calculator.html'">
+                        <i class='bx bxs-calculator'></i>
+                        <span>Calculator</span>
+                    </div>
+                    <div class="link active" id="userProfileDivMobile" onclick="window.location.href='userAuth.html'">
+                            
+                    </div>
+                    <div class="link" onclick="window.location.href='analytic.html'">
+                        <i class='bx bx-line-chart' ></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="link" id="settingsDivMobile" onclick="window.location.href='settings.html'">
+                        <i class='bx bxs-cog' ></i>
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="main">
+            <div class="texts">
+                <h1>Profile</h1>
+                <hr>
+                <div class="informations">
+                    <div class="image-profile" onclick="editProfilePicture()">
+                        <img src="#" class="profile-picture-css" id="bigProfilePicture">
+                        <div class="edit"><i class='bx bxs-edit'></i></i></div>
+                    </div>
+                    <div class="informations-div">
+                        <div class="profile">
+                            <h2>Profile information</h2>
+                            <span>Name: <strong id="name"></strong></span>
+                            <input type="text" id="input-name" class="edit-input hidden" oninput="changedName = true">
+                            <span><i class="bx bxs-edit icon-edit" id="edit-name"></i></span>
+                            <br>
+                            <span>Username: <strong id="username"></strong></span>
+                            <input type="text" id="input-username" class="edit-input hidden" oninput="changedUsername = true">
+                            <span><i class="bx bxs-edit icon-edit" id="edit-username"></i></span>
+                            <br>
+                            <span>Email: <strong id="email"></strong></span>
+                            <input type="text" id="input-email" class="edit-input hidden" oninput="changedEmail = true">
+                            <span><i class="bx bxs-edit icon-edit" id="edit-email"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="apply hidden" id="apply">
+                    <button class="animated-button">
+                        <span class="text">Apply</span>
+                        <span class="circle"></span>
+                    </button>  
+                </div>
+            </div>
+        </div>
+
+    <script src='js/navbar.js'></script>
+    <script src="js/profile.js"></script>
+    </body>
+</html>
