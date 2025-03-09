@@ -34,10 +34,4 @@ $port = getenv('DB_PORT');
 $database = getenv('DB_NAME');
 
 $db = mysqli_connect($hostname, $username, $pass, $database);
-
-/*
-$apiKey = getenv('BINANCE_TOKEN');
-$apiSecret = getenv('BINANCE_SECRET');
-$accessToken = getenv('PUSHBULLET_TOKEN');
-*/
 ?>

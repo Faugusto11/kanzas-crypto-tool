@@ -206,7 +206,7 @@ applyButton.addEventListener('click', async () => {
   nameInput.classList.add('hidden');
   usernameInput.classList.add('hidden');
   emailInput.classList.add('hidden');
-  //Send to applyUserProfile.php as json
+  //Send to updateUserProfile.php as json
   const newName = nameSpan.innerText;
   const newUsername = usernameSpan.innerText;
   const newEmail = emailSpan.innerText;
@@ -219,7 +219,7 @@ applyButton.addEventListener('click', async () => {
     newEmail: newEmail
   };
 
-  fetch('backend/edit/applyUserProfile.php', {
+  fetch('backend/edit/updateUserProfile.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

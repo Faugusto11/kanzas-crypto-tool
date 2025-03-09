@@ -4,24 +4,32 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['CONTENT_TYPE'] === 'application/json') {
         session_start();
         $data = json_decode(file_get_contents('php://input'), true);
-        $originalUsername = $data['originalUsername'];
-        $newEmail = $data['newEmail'];
-        $newAccessToken = $data['newApiKey'];
-        $newSecretToken = $data['newApiSecret'];
+        $newAccessToken = $data['access_token'];
+        $newSecretToken = $data['secret_token'];
 
-        // Atualiza as configurações do usuário no banco de dados
-        $queryUpdate = "UPDATE users SET email = '$newEmail', access_token = '$newAccessToken', secret_token = '$newSecretToken' WHERE username = '$originalUsername'";
+        if($newAccessToken == "No API Key" || $newSecretToken == "No API Secret"){
+            $response = array(
+                'success' => false,
+                'message' => 'No API Key or Secret'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            $db->close();
+            exit;
+        }
+
+        $queryUpdate = "UPDATE users SET access_token = '$newAccessToken', secret_token = '$newSecretToken' WHERE username = '".$_SESSION['user']."'";
         
         if($db->query($queryUpdate)){
             // Retorna uma resposta JSON
             $response = array(
                 'success' => true,
-                'message' => 'Configurações atualizadas com sucesso'
+                'message' => 'Settings Sucessfully Updated'
             );
         } else {
             $response = array(
                 'success' => false,
-                'message' => 'Erro ao atualizar as configurações'
+                'message' => 'Error updating settings: ' . $db->error
             );
         }
         header('Content-Type: application/json');
@@ -31,7 +39,7 @@
     } else {
         $response = array(
             'success' => false,
-            'message' => 'Método não permitido'
+            'message' => 'Invalid request'
         );
         header('Content-Type: application/json');
         echo json_encode($response);

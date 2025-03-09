@@ -182,7 +182,6 @@ h2{
 .icon-edit {
     position: absolute;
     font-size: 20px;
-    margin-left: 10px;
     margin-top: 4px;
 }
 .icon-edit:hover {
@@ -193,6 +192,10 @@ h2{
     padding: 1.5px;
     border-radius: 10px;
     transition: all 0.5s;
+}
+.apiKey, .secretKey{
+    display: flex; 
+    gap: 25px;
 }
 @media (max-width: 600px){
     .buttons{

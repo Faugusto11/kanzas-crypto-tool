@@ -12,7 +12,7 @@ async function loadAvailableCoins() {
         const response = await fetch('backend/get/getAvailableCoins.php');
         const data = await response.json();
         // Hide loading GIF and show calculator after loading coins
-        document.querySelector('.loading').classList.add('hidden');
+        document.getElementById('loadingGif').classList.add('hidden');
         document.querySelector('.calculator').classList.remove('hidden');
 
         if (data.success) {

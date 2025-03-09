@@ -134,24 +134,6 @@ h2{
     opacity: 1;
 }
 
-/* Edit Input */
-
-.edit-input{
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-family: poppins;
-    font-weight: bold;
-    width: calc(100vw - 140px);
-    max-width: 400px;
-    border-bottom: 2px solid rgb(120, 120, 120);
-}
-.edit-input:focus{
-    outline: none;
-    color: rgb(183, 183, 183);
-    transition: all 0.2s ease-in-out; 
-}
 /* Logout Button */
 .Btn {
     display: flex;

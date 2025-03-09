@@ -70,8 +70,8 @@
             </div>
         </div>
         <div class="navigationMobile">
-            <div class="closeNavigationMobile" onclick="toggleMobileNav()">
-                <i class='bx bx-x' ></i>
+            <div class="closeNavigationMobile">
+                <i class='bx bx-x' onclick="toggleMobileNav()"></i>
             </div>
             <div class="mobileWrapper">
                 <div class="links">
@@ -102,16 +102,27 @@
                     <div class="informations-div">
                         <div class="binance">
                             <h2>Binance API</h2>
-                            <span>API Key: <strong id="accessToken"></strong></span>
-                            <span><i class="bx bxs-edit icon-edit" id="edit-api-key"></i></span>
-                            <br>
-                            <span>API Secret: <strong id="secretToken"></strong></span>
-                            <span><i class="bx bxs-edit icon-edit" id="edit-api-secret"></i></span>
+                            <div class="apiKey">
+                                <span>API Key: <strong id="hidden-accessToken">*************</strong><strong id="accessToken" class="hidden"></strong></span>
+                                <div class="hidden" id="accessToken-data">
+                                    <input type="text" id="input-api-key" class="edit-input hidden" oninput="changedUsername = true">
+                                    <span><i class="bx bxs-edit icon-edit" id="edit-api-key"></i></span>
+                                </div>
+                                <span><i class="bx bxs-hide" id="show-accessToken" style="cursor: pointer;" onclick="show('accessToken')"></i></span>
+                            </div>
+                            <div class="secretKey">
+                                <span>API Secret: <strong id="hidden-secretToken">*************</strong><strong id="secretToken" class="hidden"></strong></span>
+                                <div class="hidden" id="secretToken-data">
+                                    <input type="text" id="input-secret-key" class="edit-input hidden" oninput="changedUsername = true">
+                                    <span><i class="bx bxs-edit icon-edit" id="edit-secret-key"></i></span>
+                                </div>
+                                <span><i class="bx bxs-hide" id="show-secretToken" style="cursor: pointer;" onclick="show('secretToken')"></i></span>
+                            </div>
                         </div>
                         <div class="change-password">
                             <h2>Change password</h2>
                             <div class="password">
-                                Aqui
+                                Continuar Aqui Depois
                             </div>
                         </div>
                     </div>
@@ -124,7 +135,7 @@
                         <div class="text-logout">Logout</div>
                     </button>  
                 </div>
-                <div class="apply" id="apply">
+                <div class="apply hidden" id="apply">
                     <button class="animated-button">
                         <span class="text">Apply</span>
                         <span class="circle"></span>

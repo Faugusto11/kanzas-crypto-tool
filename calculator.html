@@ -97,7 +97,7 @@
             <h1>Currency Converter</h1>
             <hr>
             <div class="loading">
-                <img src="media/loading.gif" alt="Loading..." />
+                <img src="media/loading.gif" id="loadingGif" alt="Loading..." />
             </div>
             <div class="calculator hidden">
                 <div class="result">
@@ -108,13 +108,13 @@
                         <select>
                             
                         </select>
-                        <input type="text" id="price-coin" value="1.00">
+                        <input type="number" id="price-coin" value="1.00" step="0.01">
                     </div>
                     <div class="coin-2">
                         <select>
                             
                         </select>
-                        <input type="text" id="price-coin-2" value="5000.00">
+                        <input type="number" id="price-coin-2" value="5000.00" step="0.01" readonly>
                     </div>
                 </div>
             </div>
